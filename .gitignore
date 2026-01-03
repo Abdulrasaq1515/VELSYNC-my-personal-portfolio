@@ -8,6 +8,8 @@
 !README.md
 !.gitignore
 !index.html
+!index.css
+!index.js
 !vercel.json
 
 # Ignore system and IDE files
