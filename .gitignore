@@ -1,0 +1,23 @@
+# Ignore everything except portfolio files
+*
+
+# But include these portfolio files
+!portfolio.html
+!portfolio.css
+!portfolio.js
+!README.md
+!.gitignore
+
+# Ignore system and IDE files
+.DS_Store
+.vscode/
+.idea/
+*.log
+node_modules/
+.env
+.env.local
+
+# Ignore all directories except current
+Documents/
+Desktop/
+**/
