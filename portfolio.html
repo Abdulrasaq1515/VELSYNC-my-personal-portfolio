@@ -35,6 +35,7 @@
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                <button onclick="showDownloadModal()" class="btn btn-secondary">Download CV</button>
             </div>
         </div>
     </section>
@@ -162,8 +163,8 @@
                         <span class="tech-tag">Drizzle ORM</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://event-management-system-production-8cea.up.railway.app/" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                        <a href="https://github.com/Abdulrasaq1515/Event-management-system" class="project-link" target="_blank" rel="noopener noreferrer">View Code</a>
+                        <a href="https://event-management-system-production-8cea.up.railway.app" class="project-link" target="_blank" rel="noopener noreferrer">🚀 Live Demo</a>
+                        <a href="https://github.com/Abdulrasaq1515/Event-management-system" class="project-link" target="_blank" rel="noopener noreferrer">💻 View Code</a>
                     </div>
                 </div>
             </div>
@@ -187,7 +188,7 @@
                         <span class="tech-tag">NextAuth</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Abdulrasaq1515/VELSYNC-mini-Amazon" class="project-link" target="_blank" rel="noopener noreferrer"> View Code</a>
+                        <a href="https://github.com/Abdulrasaq1515/VELSYNC-mini-Amazon" class="project-link" target="_blank" rel="noopener noreferrer">💻 View Code</a>
                     </div>
                 </div>
             </div>
@@ -211,7 +212,7 @@
                         <span class="tech-tag">JWT</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Abdulrasaq1515/Expense_tracking_system" class="project-link" target="_blank" rel="noopener noreferrer">View Code</a>
+                        <a href="https://github.com/Abdulrasaq1515/Expense_tracking_system" class="project-link" target="_blank" rel="noopener noreferrer">💻 View Code</a>
                     </div>
                 </div>
             </div>
@@ -235,7 +236,7 @@
                         <span class="tech-tag">Maven</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Abdulrasaq1515/Koinsave" class="project-link" target="_blank" rel="noopener noreferrer">View Code</a>
+                        <a href="https://github.com/Abdulrasaq1515/Koinsave" class="project-link" target="_blank" rel="noopener noreferrer">💻 View Code</a>
                     </div>
                 </div>
             </div>
@@ -259,8 +260,8 @@
                         <span class="tech-tag">Auth0</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://book-management-frontend-ten.vercel.app" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                        <a href="https://github.com/Abdulrasaq1515/book-management" class="project-link" target="_blank" rel="noopener noreferrer">View Code</a>
+                        <a href="https://book-management-frontend-ten.vercel.app" class="project-link" target="_blank" rel="noopener noreferrer">🚀 Live Demo</a>
+                        <a href="https://github.com/Abdulrasaq1515/book-management" class="project-link" target="_blank" rel="noopener noreferrer">💻 View Code</a>
                     </div>
                 </div>
             </div>
@@ -277,6 +278,7 @@
                 Whether you're looking for someone to architect APIs, build responsive UIs, 
                 or own features end-to-end, let's connect!
             </p>
+            <button onclick="showDownloadModal()" class="btn btn-primary" style="margin-bottom: 40px;">📄 Download My CV</button>
             <div class="social-links">
                 <a href="https://github.com/Abdulrasaq1515" class="social-icon" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -310,6 +312,36 @@
         <p>© 2026 Rasaq Ajape. Crafted with passion and clean code.</p>
         <p style="margin-top: 10px; color: #666;">Lagos, Nigeria | Remote-Ready | Open to Global Opportunities</p>
     </footer>
-    <script src="portfolio.js"></script>
-    </body>
+
+    <!-- Download Modal -->
+    <div id="downloadModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeDownloadModal()">×</button>
+            <h3 class="modal-title">Download Documents</h3>
+            <p class="modal-subtitle">Choose what you'd like to download</p>
+            <div class="download-options">
+                <a href="#" class="download-btn" onclick="downloadCV(); return false;">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M12,19L8,15H10.5V12H13.5V15H16L12,19Z"/>
+                    </svg>
+                    <div class="download-info">
+                        <div class="download-title">Resume / CV</div>
+                        <div class="download-desc">Full professional resume with experience & projects</div>
+                    </div>
+                </a>
+                <a href="#" class="download-btn" onclick="downloadCoverLetter(); return false;">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+                    </svg>
+                    <div class="download-info">
+                        <div class="download-title">Cover Letter</div>
+                        <div class="download-desc">Professional cover letter for job applications</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+   </body>
 </html>
+    <script src="portfolio.js"></script>
